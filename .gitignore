@@ -1,0 +1,16 @@
+.cloud
+.storage
+.vscode
+deps
+image
+tts
+www
+.HA_VERSION
+home-assistant_v2.db
+home-assistant.log
+options.xml
+OZW_Log.txt
+pyozw.sqlite
+zigbee.db
+zwcfg_0xd9c4da70.xml
+zwscene.xml
