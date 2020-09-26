@@ -1,0 +1,66 @@
+- name: Evening Lights (Charlie)
+  entities:
+    light.charlie_s_lamp:
+      brightness: 30
+      friendly_name: Charlie's Lamp
+      supported_features: 41
+      state: 'on'
+    light.charlie_s_room_main:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 30
+      color_temp: 349
+      friendly_name: Charlie's Room Main
+      supported_features: 43
+      state: 'on'
+- name: Bath Time
+  icon: mdi:shower
+  entities:
+    light.guest_bathroom:
+      brightness: 50
+      state: 'on'
+- name: TV Time
+  icon: mdi:television-classic
+  entities:
+    light.dining_room_zha_group_0x0002:
+      brightness: 31
+      off_brightness:
+      friendly_name: Dining Room
+      supported_features: 41
+      state: 'on'
+    light.kitchen_zha_group_0x0003:
+      state: 'off'
+    light.entryway_zha_group_0x0005:
+      state: 'off'
+    light.living_room_zha_group_0x0004:
+      state: 'off'
+- name: Bright Lights
+  icon: mdi:lightbulb-on
+  entities:
+    light.dining_room_zha_group_0x0002:
+      state: 'on'
+      brightness: 254
+    light.kitchen_zha_group_0x0003:
+      state: 'on'
+      brightness: 254
+    light.entryway_zha_group_0x0005:
+      state: 'on'
+      brightness: 254
+    light.living_room_zha_group_0x0004:
+      state: 'on'
+      brightness: 254
+- name: Dim Lights
+  icon: mdi:brightness-4
+  entities:
+    light.dining_room_zha_group_0x0002:
+      state: 'on'
+      brightness: 50
+    light.kitchen_zha_group_0x0003:
+      state: 'on'
+      brightness: 50
+    light.entryway_zha_group_0x0005:
+      state: 'on'
+      brightness: 50
+    light.living_room_zha_group_0x0004:
+      state: 'on'
+      brightness: 50

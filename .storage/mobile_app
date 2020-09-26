@@ -1,0 +1,439 @@
+{
+    "version": 1,
+    "key": "mobile_app",
+    "data": {
+        "binary_sensor": {
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_is_charging": {
+                "unique_id": "is_charging",
+                "state": false,
+                "type": "binary_sensor",
+                "icon": "mdi:power-plug-off",
+                "attributes": {},
+                "name": "Is Charging",
+                "device_class": "plug",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_is_charging": {
+                "unique_id": "is_charging",
+                "state": false,
+                "type": "binary_sensor",
+                "icon": "mdi:power-plug-off",
+                "attributes": {},
+                "name": "Is Charging",
+                "device_class": "plug",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_is_charging": {
+                "unique_id": "is_charging",
+                "state": false,
+                "type": "binary_sensor",
+                "icon": "mdi:power-plug-off",
+                "attributes": {},
+                "name": "Is Charging",
+                "device_class": "plug",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_is_charging": {
+                "unique_id": "is_charging",
+                "state": false,
+                "type": "binary_sensor",
+                "icon": "mdi:power-plug-off",
+                "attributes": {},
+                "name": "Is Charging",
+                "device_class": "plug",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            }
+        },
+        "deleted_ids": [
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95"
+        ],
+        "sensor": {
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_battery_level": {
+                "unique_id": "battery_level",
+                "state": 44,
+                "type": "sensor",
+                "icon": "mdi:battery-40",
+                "attributes": {},
+                "name": "Battery Level",
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_battery_state": {
+                "unique_id": "battery_state",
+                "state": "discharging",
+                "type": "sensor",
+                "icon": "mdi:battery-minus",
+                "attributes": {
+                    "battery_health": "good",
+                    "charger_type": "none",
+                    "is_charging": false
+                },
+                "name": "Battery State",
+                "device_class": "battery",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_charger_type": {
+                "unique_id": "charger_type",
+                "state": "none",
+                "type": "sensor",
+                "icon": "mdi:battery",
+                "attributes": {},
+                "name": "Charger Type",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_battery_health": {
+                "unique_id": "battery_health",
+                "state": "good",
+                "type": "sensor",
+                "icon": "mdi:battery-heart-variant",
+                "attributes": {},
+                "name": "Battery Health",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_wifi_connection": {
+                "unique_id": "wifi_connection",
+                "state": "TheSmartHome",
+                "type": "sensor",
+                "icon": "mdi:wifi",
+                "attributes": {
+                    "bssid": "e8:b2:fe:bc:47:ac",
+                    "frequency": 5805,
+                    "ip_address": "192.168.1.106",
+                    "is_hidden": false,
+                    "is_wifi_on": true,
+                    "link_speed": 432,
+                    "signal_level": -49
+                },
+                "name": "WiFi Connection",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_phone_state": {
+                "unique_id": "phone_state",
+                "state": "idle",
+                "type": "sensor",
+                "icon": "mdi:phone",
+                "attributes": {},
+                "name": "Phone State",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95_geocoded_location": {
+                "unique_id": "geocoded_location",
+                "state": "1009 Shadow Ln, Nashville, TN 37206, USA",
+                "type": "sensor",
+                "icon": "mdi:map",
+                "attributes": {
+                    "Administrative Area": "Tennessee",
+                    "Country": "United States",
+                    "ISO Country Code": "US",
+                    "Latitude": 36.186794,
+                    "Locality": "Nashville",
+                    "Longitude": -86.70573,
+                    "Postal Code": "37206",
+                    "Sub Administrative Area": "Davidson County",
+                    "Sub Locality": "null",
+                    "Sub Thoroughfare": "1009",
+                    "Thoroughfare": "Shadow Lane"
+                },
+                "name": "Geocoded Location",
+                "webhook_id": "8f58903cac2232b9eeadbbb02e8441e50c501a3b46ff79e18109054f758b1e95",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_geocoded_location": {
+                "unique_id": "geocoded_location",
+                "state": "1009C Shadow Ln, Nashville, TN 37206, USA",
+                "type": "sensor",
+                "icon": "mdi:map",
+                "attributes": {
+                    "Administrative Area": "Tennessee",
+                    "Country": "United States",
+                    "ISO Country Code": "US",
+                    "Latitude": 36.186752,
+                    "Locality": "Nashville",
+                    "Longitude": -86.70572,
+                    "Postal Code": "37206",
+                    "Sub Administrative Area": "Davidson County",
+                    "Sub Locality": "null",
+                    "Sub Thoroughfare": "1009C",
+                    "Thoroughfare": "Shadow Lane"
+                },
+                "name": "Geocoded Location",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_wifi_connection": {
+                "unique_id": "wifi_connection",
+                "state": "TheSmartHome",
+                "type": "sensor",
+                "icon": "mdi:wifi",
+                "attributes": {
+                    "bssid": "e8:b2:fe:bc:47:a4",
+                    "frequency": -1,
+                    "ip_address": "0.0.0.0",
+                    "is_hidden": false,
+                    "is_wifi_on": true,
+                    "link_speed": -1,
+                    "signal_level": -75
+                },
+                "name": "WiFi Connection",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_battery_level": {
+                "unique_id": "battery_level",
+                "state": 30,
+                "type": "sensor",
+                "icon": "mdi:battery-30",
+                "attributes": {},
+                "name": "Battery Level",
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_battery_level": {
+                "unique_id": "battery_level",
+                "state": 76,
+                "type": "sensor",
+                "icon": "mdi:battery-70",
+                "attributes": {},
+                "name": "Battery Level",
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_battery_state": {
+                "unique_id": "battery_state",
+                "state": "discharging",
+                "type": "sensor",
+                "icon": "mdi:battery-minus",
+                "attributes": {
+                    "battery_health": "good",
+                    "charger_type": "none",
+                    "is_charging": false
+                },
+                "name": "Battery State",
+                "device_class": "battery",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_charger_type": {
+                "unique_id": "charger_type",
+                "state": "none",
+                "type": "sensor",
+                "icon": "mdi:battery",
+                "attributes": {},
+                "name": "Charger Type",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_battery_health": {
+                "unique_id": "battery_health",
+                "state": "good",
+                "type": "sensor",
+                "icon": "mdi:battery-heart-variant",
+                "attributes": {},
+                "name": "Battery Health",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_geocoded_location": {
+                "unique_id": "geocoded_location",
+                "state": "1007 Shadow Ln, Nashville, TN 37206, USA",
+                "type": "sensor",
+                "icon": "mdi:map",
+                "attributes": {
+                    "Administrative Area": "Tennessee",
+                    "Country": "United States",
+                    "ISO Country Code": "US",
+                    "Latitude": 36.18659,
+                    "Locality": "Nashville",
+                    "Longitude": -86.70587,
+                    "Postal Code": "37206",
+                    "Sub Administrative Area": "Davidson County",
+                    "Sub Locality": "null",
+                    "Sub Thoroughfare": "1007",
+                    "Thoroughfare": "Shadow Lane"
+                },
+                "name": "Geocoded Location",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_wifi_connection": {
+                "unique_id": "wifi_connection",
+                "state": "TheSmartHome",
+                "type": "sensor",
+                "icon": "mdi:wifi",
+                "attributes": {
+                    "bssid": "e8:b2:fe:bc:47:a4",
+                    "frequency": 2462,
+                    "ip_address": "192.168.1.115",
+                    "is_hidden": false,
+                    "is_wifi_on": true,
+                    "link_speed": 13,
+                    "signal_level": -80
+                },
+                "name": "WiFi Connection",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7_phone_state": {
+                "unique_id": "phone_state",
+                "state": "idle",
+                "type": "sensor",
+                "icon": "mdi:phone",
+                "attributes": {},
+                "name": "Phone State",
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_battery_state": {
+                "unique_id": "battery_state",
+                "state": "discharging",
+                "type": "sensor",
+                "icon": "mdi:battery-minus",
+                "attributes": {
+                    "battery_health": "good",
+                    "charger_type": "none",
+                    "is_charging": false
+                },
+                "name": "Battery State",
+                "device_class": "battery",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_charger_type": {
+                "unique_id": "charger_type",
+                "state": "none",
+                "type": "sensor",
+                "icon": "mdi:battery",
+                "attributes": {},
+                "name": "Charger Type",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_phone_state": {
+                "unique_id": "phone_state",
+                "state": "idle",
+                "type": "sensor",
+                "icon": "mdi:phone",
+                "attributes": {},
+                "name": "Phone State",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886_detected_activity": {
+                "unique_id": "detected_activity",
+                "state": "still",
+                "type": "sensor",
+                "icon": "mdi:sleep",
+                "attributes": {
+                    "still": 100
+                },
+                "name": "Detected Activity",
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_battery_level": {
+                "unique_id": "battery_level",
+                "state": 81,
+                "type": "sensor",
+                "icon": "mdi:battery-80",
+                "attributes": {},
+                "name": "Battery Level",
+                "device_class": "battery",
+                "unit_of_measurement": "%",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_battery_state": {
+                "unique_id": "battery_state",
+                "state": "discharging",
+                "type": "sensor",
+                "icon": "mdi:battery-minus",
+                "attributes": {
+                    "battery_health": "good",
+                    "charger_type": "none",
+                    "is_charging": false
+                },
+                "name": "Battery State",
+                "device_class": "battery",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_charger_type": {
+                "unique_id": "charger_type",
+                "state": "none",
+                "type": "sensor",
+                "icon": "mdi:battery",
+                "attributes": {},
+                "name": "Charger Type",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_battery_health": {
+                "unique_id": "battery_health",
+                "state": "good",
+                "type": "sensor",
+                "icon": "mdi:battery-heart-variant",
+                "attributes": {},
+                "name": "Battery Health",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_geocoded_location": {
+                "unique_id": "geocoded_location",
+                "state": "2828 Old Hickory Blvd, Nashville, TN 37221, USA",
+                "type": "sensor",
+                "icon": "mdi:map",
+                "attributes": {
+                    "Administrative Area": "Tennessee",
+                    "Country": "United States",
+                    "ISO Country Code": "US"
+                },
+                "name": "Geocoded Location",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_wifi_connection": {
+                "unique_id": "wifi_connection",
+                "state": "ATTbhu89Wa",
+                "type": "sensor",
+                "icon": "mdi:wifi",
+                "attributes": {
+                    "bssid": "10:93:97:7f:eb:20",
+                    "frequency": -1,
+                    "ip_address": "0.0.0.0",
+                    "is_hidden": false,
+                    "is_wifi_on": true,
+                    "link_speed": -1,
+                    "signal_level": -71
+                },
+                "name": "WiFi Connection",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c_phone_state": {
+                "unique_id": "phone_state",
+                "state": "idle",
+                "type": "sensor",
+                "icon": "mdi:phone",
+                "attributes": {},
+                "name": "Phone State",
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "added": true
+            }
+        }
+    }
+}

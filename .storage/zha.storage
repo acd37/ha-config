@@ -1,0 +1,108 @@
+{
+    "version": 1,
+    "key": "zha.storage",
+    "data": {
+        "devices": [
+            {
+                "name": "Silicon Labs EZSP",
+                "ieee": "00:0d:6f:00:15:0e:71:2b",
+                "last_seen": 1601153632.3600285
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:38:fe",
+                "last_seen": 1601154105.9951828
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:43:14",
+                "last_seen": 1601154126.749414
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:04:43",
+                "last_seen": 1601154106.1300666
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:49:92",
+                "last_seen": 1601154118.9516823
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:1f:de",
+                "last_seen": 1601154160.0019226
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:1d:d9",
+                "last_seen": 1601154101.8381455
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:5d:c2",
+                "last_seen": 1601154120.4508302
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:48:c5",
+                "last_seen": 1601154162.1001887
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:41:98",
+                "last_seen": 1601154160.9849536
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:64:e6",
+                "last_seen": 1601154074.7484815
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2b:ff:1e",
+                "last_seen": 1601154074.7886417
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:39:40",
+                "last_seen": 1601154185.1748567
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:49:7c",
+                "last_seen": 1601154074.9051545
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:6d:f0",
+                "last_seen": 1601154137.901248
+            },
+            {
+                "name": "sengled E12-N14",
+                "ieee": "b0:ce:18:14:03:2c:63:ff",
+                "last_seen": 1601154137.9353652
+            },
+            {
+                "name": "SmartThings outletv4",
+                "ieee": "24:fd:5b:00:01:03:37:c9",
+                "last_seen": 1601154177.2463875
+            },
+            {
+                "name": "Samjin button",
+                "ieee": "28:6d:97:00:01:00:51:29",
+                "last_seen": 1601153931.774867
+            },
+            {
+                "name": "Samjin button",
+                "ieee": "28:6d:97:00:01:00:51:34",
+                "last_seen": 1601153684.4521444
+            },
+            {
+                "name": "SmartThings moisturev4",
+                "ieee": "24:fd:5b:00:01:03:cc:aa",
+                "last_seen": 1601154031.5860083
+            }
+        ]
+    }
+}

@@ -1,0 +1,365 @@
+# --------------------
+# Doorbell Notification
+# --------------------
+- alias: Send a notification when the doorbell is pressed
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: switch.aeon_labs_zw056_doorbell_gen5_switch
+      to: 'on'
+  condition: []
+  action:
+    - service: notify.notify
+      data_template:
+        message:
+          "Someone is at the door!"
+    - service: tts.google_translate_say
+      entity_id: 
+        - media_player.living_room
+        - media_player.master_bedroom_speaker
+      data:
+        message: 'Someone is at the door!'
+  mode: single
+  
+# --------------------
+# Morning Notification
+# --------------------
+
+# - alias: Morning notification
+#   description: Sends a notification each morning with local weather
+#   trigger:
+#     - platform: time
+#       at: "11:48:00"
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message:
+#           "Hi, today's temperature is  {{ states.sensor.openweathermap_forecast_temperature.state }}"
+
+# --------------------
+# Location Tracking
+# --------------------
+
+- alias: Location Tracking
+  description: Tracks our location
+  trigger:
+    - platform: state
+      entity_id:
+        - person.alec_down
+        - person.kelsey_down
+        - person.christopher_hansen
+  condition:
+    - condition: template
+      value_template: "{{  trigger.from_state.state != trigger.to_state.state }}"
+  action:
+    - service: notify.notify
+      data_template:
+        message:
+          "{{ trigger.to_state.attributes.friendly_name }} {% if trigger.to_state.state
+          == 'not_home' %}has left {{ trigger.from_state.state }}{% endif %}{% if
+          trigger.from_state.state == 'not_home' %}arrived at {{ trigger.to_state.state
+          }}{% endif %}."
+  mode: single
+
+- alias: Run Noodle when everyone is away
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: group.people
+      to: 'not_home'
+  condition:
+    - condition: template
+      value_template:
+        "{{as_timestamp(state_attr('automation.run_noodle_when_everyone_is_away','last_triggered'))|timestamp_custom('%-d')
+        != as_timestamp(now())|timestamp_custom('%-d')}}"
+  action:
+    - service: vacuum.start
+      data: {}
+      entity_id: vacuum.noodle
+    - service: notify.notify
+      data_template:
+        message: Noodle has started vacuuming.
+  mode: single
+
+- alias: Unlock door when someone arrives home
+  description: ""
+  trigger:
+    - platform: zone
+      entity_id: 
+        - person.alec_down
+        - person.kelsey_down
+        - person.christopher_hansen
+      zone: zone.home
+      event: enter
+  condition: []
+  action:
+    - device_id: 5f5d09fdfb4611ea9bcab11affd24be8
+      domain: lock
+      entity_id: lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked
+      type: unlock
+  mode: single
+
+- alias: Turn all lights off when everyone is away
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: group.people
+      to: 'not_home'
+  condition: []
+  action:
+    - service: light.turn_off
+      entity_id: all
+  mode: single
+
+# --------------------
+# Charlie's Lighting
+# --------------------
+
+- alias: Charlie's lights turn off at 20:00
+  description: ""
+  trigger:
+    - platform: time
+      at: "20:00:00"
+  condition: []
+  action:
+    - domain: light
+      entity_id: light.charlie_s_room_main
+      device_id: b5903047f9dd11ea8b6a49751688ce3d
+      type: turn_off
+    - domain: light
+      entity_id: light.charlie_s_lamp
+      device_id: b593abebf9dd11ea8be8175731296711
+      type: turn_off
+
+# --------------------
+# General Lighting
+# --------------------
+
+- alias: Brighten lights in the morning
+  description: ""
+  trigger:
+    - platform: time
+      at: 08:00:00
+  condition: []
+  action:
+    - service: script.turn_on
+      entity_id:
+        - script.morning_lights
+  mode: single
+
+- alias: Dim lights in the evening
+  description: ""
+  trigger:
+    - platform: time
+      at: "19:00:00"
+  condition: []
+  action:
+    - service: script.turn_on
+      entity_id:
+        - script.evening_lights
+  mode: single
+
+- alias: Set lights to 100% if turned on during the day
+  description: ""
+  trigger:
+    platform: state
+    entity_id:
+      - light.office
+      - light.kitchen_zha_group_0x0003
+      - light.dining_room_zha_group_0x0002
+      - light.living_room_zha_group_0x0004
+      - light.entryway_zha_group_0x0005
+      - light.hallway
+      - light.charlie_s_bathroom
+      - light.charlie_s_lamp
+      - light.charlie_s_room_main
+      - light.guest_bathroom
+    to: 'on'
+  condition:
+    condition: time
+    after: '06:00'
+    before: '19:00'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"
+      brightness: 255
+  mode: single
+
+- alias: Dim if turned on after 7pm
+  description: ""
+  trigger:
+    platform: state
+    entity_id:
+      - light.office
+      - light.kitchen_zha_group_0x0003
+      - light.dining_room_zha_group_0x0002
+      - light.living_room_zha_group_0x0004
+      - light.entryway_zha_group_0x0005
+      - light.hallway
+      - light.charlie_s_bathroom
+      - light.charlie_s_lamp
+      - light.charlie_s_room_main
+      - light.guest_bathroom
+    to: 'on'
+  condition:
+    condition: time
+    after: '19:00'
+    before: '06:00'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"
+      brightness: 50
+  mode: single
+
+- alias: Turn off Charlie's lights if turned on after 8pm
+  description: ""
+  trigger:
+    platform: state
+    entity_id:
+      - light.charlie_s_lamp
+      - light.charlie_s_room_main
+    to: 'on'
+  condition:
+    condition: time
+    after: '20:00'
+    before: '05:00'
+  action:
+    service: light.turn_off
+    data_template:
+      entity_id: "{{ trigger.entity_id }}"
+  mode: single
+
+# --------------------
+# Security
+# --------------------
+
+- alias: Lock the door after 5 minutes
+  description: ""
+  trigger:
+    - platform: device
+      device_id: 5f5d09fdfb4611ea9bcab11affd24be8
+      domain: lock
+      entity_id: lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked
+      type: unlocked
+  condition: []
+  action:
+    - delay:
+        minutes: 5
+    - device_id: 5f5d09fdfb4611ea9bcab11affd24be8
+      domain: lock
+      entity_id: lock.schlage_allegion_be469zp_connect_smart_deadbolt_locked
+      type: lock
+  mode: single
+
+# --------------------
+# Dashboard Theming
+# --------------------
+
+- alias: "Set theme at startup"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: iOS Light Mode
+
+- alias: "Set HA theme for day and night"
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: state
+      entity_id: sun.sun
+      to: above_horizon
+    - platform: state
+      entity_id: sun.sun
+      to: below_horizon
+  action:
+    - service: frontend.set_theme
+      data_template:
+        name: >
+          {% if states.sun.sun.state == "above_horizon" %}
+            iOS Light Mode
+          {% else %}
+            iOS Dark Mode
+          {% endif %}
+
+# ---------------------------------------
+# ST Automation Templates with IEEE IDs
+# ---------------------------------------
+
+# - alias: "button push"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:29
+#       command: button_single
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: button push
+
+# - alias: "double button push"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:29
+#       command: button_double
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: double button push
+
+# - alias: "button hold"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:29
+#       command: button_hold
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: button hold
+
+# - alias: "button push"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:34
+#       command: button_single
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: button 2 push
+
+# - alias: "double button push"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:34
+#       command: button_double
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: double button 2 push
+
+# - alias: "button hold"
+#   trigger:
+#     platform: event
+#     event_type: zha_event
+#     event_data:
+#       device_ieee: 28:6d:97:00:01:00:51:34
+#       command: button_hold
+#   action:
+#     - service: notify.mobile_app_sm_g975u
+#       data_template:
+#         message: button 2 hold
+
+        

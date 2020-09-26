@@ -1,0 +1,69 @@
+{
+    "version": 1,
+    "key": "cloud",
+    "data": {
+        "alexa_default_expose": [
+            "climate",
+            "cover",
+            "fan",
+            "humidifier",
+            "light",
+            "lock",
+            "scene",
+            "script",
+            "sensor",
+            "switch",
+            "vacuum",
+            "water_heater"
+        ],
+        "alexa_entity_configs": {},
+        "cloud_user": "e8dd1a2373054c35907fad5280931cbe",
+        "cloudhooks": {
+            "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886": {
+                "webhook_id": "d4592b13a8ef415b248073b90adcbc56abc695984fbe1d1e0d0faaea859bd886",
+                "cloudhook_id": "127e32aee9d24101a40bbbed100882b3",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfZSELa6U31AVhyIu0W4KJJ1Z7ukMRFFgCgZPZNQ0I8OAN80LMSxSGrB4Nh6e-goGtg0TdtOlYMJ8eUzqpFTx_7s6S9FcVUjrGHNcXFMoUHtHGhd5EuDLuQo4sSuIIFqDQW2j37y6M-fNIeWm1EmF3JPzCYXq2XF4occjBwznqrVCDrsM=",
+                "managed": true
+            },
+            "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7": {
+                "webhook_id": "a99cee3da5bb94e2645e0e835ff8d2316ff10e99eef411b7ed9691e981400ea7",
+                "cloudhook_id": "e5a43ba08a394321a605a82c95708963",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfZTyRxlr6-EfXavbRg4JoYZqHne3PDj5VEIw65aaq2_eZXQ_K-78xSf-_-xA9cD_rxCVp7pZ-LFuEetna0DJg35Q1Zi2xUNJHQmWLg5Zuu76Tpg9qa0ifKXhQzlzzTAa-_w_WD01uXBe0o_E63KkndCVGieQxwIbIJp1-7DtTTFUqCUI=",
+                "managed": true
+            },
+            "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c": {
+                "webhook_id": "9969b6f8ebcc988aca6fa0f3f5a324a31cc9e1dc66e8ce999d5ae1b428a3e68c",
+                "cloudhook_id": "3a55dd256e4840a4b37b0b9e194b3846",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfa_uBmtD_gYxYR5HXPV62YBpXcG5bzpGN_gBDX9CshqpOcBxRx2LYXWX6yA9bqDf5864LBX3TAOuPsAbW6GM1wc4mmMdExz28joo92Xyv3NZMqL1WIbk899TR2rmOoRLrarpMsir2d88UiG8YJLh6hEe4dhDjTmOcG9dzz7mlxnxmAcs=",
+                "managed": true
+            },
+            "055bf10cd9857d2ff31ff83ed14ea76001b88bdd87d82fa1d57c35c168fe4c81": {
+                "webhook_id": "055bf10cd9857d2ff31ff83ed14ea76001b88bdd87d82fa1d57c35c168fe4c81",
+                "cloudhook_id": "289d811c9a014160a74f8efd04635d68",
+                "cloudhook_url": "https://hooks.nabu.casa/gAAAAABfbKhwb0bcL11oE4t8p2IrRQ2VYR8vKEX40CKXVx_e4Gpo95asAoe5tPmUFyCJDQ8FQIDBLjq_ME5Al7Nb1C-YZ9KAr85BP3NvDRD_pMK99QkdvoTXjJRTeSdvtdrKosK8Atu82szUqMCMA-ybmYF3rgr0jRIwujJIJ0EaKN6fw-x28U8=",
+                "managed": true
+            }
+        },
+        "alexa_enabled": false,
+        "google_enabled": true,
+        "remote_enabled": true,
+        "google_default_expose": [
+            "climate",
+            "cover",
+            "fan",
+            "humidifier",
+            "light",
+            "lock",
+            "scene",
+            "script",
+            "sensor",
+            "switch",
+            "vacuum",
+            "water_heater"
+        ],
+        "google_entity_configs": {},
+        "google_local_webhook_id": "773db1b8a3bf3a0176dacd70e8469d8e6d33e947f74bab0da79f91e20c619991",
+        "google_secure_devices_pin": null,
+        "username": "6e5dc229-c901-4f77-9f11-20ab38f959e0"
+    }
+}

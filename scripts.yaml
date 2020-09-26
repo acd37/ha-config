@@ -1,0 +1,133 @@
+dim_lights:
+  alias: Dim Lights
+  icon: mdi:brightness-4
+  sequence:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.dim_lights
+
+bright_lights:
+  alias: Bright Lights
+  icon: mdi:lightbulb-on
+  sequence:
+    - service: scene.turn_on
+      data:
+        entity_id: scene.bright_lights
+
+morning_lights:
+  alias: Brighten lights in the morning
+  sequence:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.charlie_s_lamp
+        brightness:
+          "{% if states.light.guest_bathroom.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.charlie_s_room_main
+        brightness:
+          "{% if states.light.guest_bathroom.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.guest_bathroom
+        brightness:
+          "{% if states.light.guest_bathroom.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.hallway
+        brightness:
+          "{% if states.light.hallway.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.office
+        brightness:
+          "{% if states.light.office.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.dining_room_zha_group_0x0002
+        brightness:
+          "{% if states.light.dining_room_zha_group_0x0002.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.kitchen_zha_group_0x0003
+        brightness:
+          "{% if states.light.kitchen_zha_group_0x0003.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.living_room_zha_group_0x0004
+        brightness:
+          "{% if states.light.living_room_zha_group_0x0004.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.entryway_zha_group_0x0005
+        brightness:
+          "{% if states.light.entryway_zha_group_0x0005.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+  mode: single
+
+evening_lights:
+  alias: Dim lights in the evening
+  sequence:
+    - service: light.turn_on
+      data_template:
+        entity_id: light.charlie_s_room_main
+        brightness:
+          "{% if states.light.hallway.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.charlie_s_lamp
+        brightness:
+          "{% if states.light.hallway.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.hallway
+        brightness:
+          "{% if states.light.hallway.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.office
+        brightness:
+          "{% if states.light.office.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.guest_bathroom
+        brightness:
+          "{% if states.light.guest_bathroom.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.dining_room_zha_group_0x0002
+        brightness:
+          "{% if states.light.dining_room_zha_group_0x0002.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.kitchen_zha_group_0x0003
+        brightness:
+          "{% if states.light.kitchen_zha_group_0x0003.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.living_room_zha_group_0x0004
+        brightness:
+          "{% if states.light.living_room_zha_group_0x0004.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.entryway_zha_group_0x0005
+        brightness:
+          "{% if states.light.entryway_zha_group_0x0005.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+  mode: single

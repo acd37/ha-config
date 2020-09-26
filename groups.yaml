@@ -1,0 +1,6 @@
+people:
+  name: People
+  entities:
+    - person.alec_down
+    - person.kelsey_down
+    - person.christopher_hansen

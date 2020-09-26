@@ -1,0 +1,9 @@
+{
+    "version": 1,
+    "key": "google_assistant",
+    "data": {
+        "agent_user_ids": {
+            "6e5dc229-c901-4f77-9f11-20ab38f959e0": {}
+        }
+    }
+}
