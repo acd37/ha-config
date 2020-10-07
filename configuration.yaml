@@ -1,3 +1,6 @@
+homeassistant:
+  time_zone: America/Chicago
+
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -14,6 +17,24 @@ frontend:
 # Text to speech
 tts:
   - platform: google_translate
+
+# Spotify plugin
+spotify:
+  client_id: da315db7c1934997a023c7fae8ef5544
+  client_secret: 7868f1c40b2245f39786ad25b017b685
+
+
+# Garbage Collection
+
+garbage_collection:
+  sensors:
+  - name: Waste # Each week on Wednesday
+    frequency: "weekly"
+    collection_days: tue
+  - name: Recycling
+    frequency: "monthly"
+    collection_days: tue
+    weekday_order_number: 1
 
 group: !include groups.yaml
 automation: !include automations.yaml

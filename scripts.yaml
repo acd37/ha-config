@@ -71,6 +71,18 @@ morning_lights:
         brightness:
           "{% if states.light.entryway_zha_group_0x0005.state == 'on' %} 255 {% else %} 0 {% endif
           %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.master_bedroom_zha_group_0x0006
+        brightness:
+          "{% if states.light.master_bedroom_zha_group_0x0006.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.landing_zha_group_0x0007
+        brightness:
+          "{% if states.light.landing_zha_group_0x0007.state == 'on' %} 255 {% else %} 0 {% endif
+          %}"
   mode: single
 
 evening_lights:
@@ -129,5 +141,17 @@ evening_lights:
         entity_id: light.entryway_zha_group_0x0005
         brightness:
           "{% if states.light.entryway_zha_group_0x0005.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.master_bedroom_zha_group_0x0006
+        brightness:
+          "{% if states.light.master_bedroom_zha_group_0x0006.state == 'on' %} 50 {% else %} 0 {% endif
+          %}"
+    - service: light.turn_on
+      data_template:
+        entity_id: light.landing_zha_group_0x0007
+        brightness:
+          "{% if states.light.landing_zha_group_0x0007.state == 'on' %} 50 {% else %} 0 {% endif
           %}"
   mode: single
